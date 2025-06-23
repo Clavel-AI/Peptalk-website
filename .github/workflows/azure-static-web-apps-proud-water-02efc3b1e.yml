@@ -26,14 +26,14 @@ jobs:
             echo "❌ Token is NOT set."
             exit 1
           else
-            echo "✅ Token is present. Length: ${#AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER_02EFC3B1E}"
+            echo "✅ Token is present. Length: ${#AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER}"
           fi
 
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER_02EFC3B1E }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER }}
           action: "upload"
           app_location: "/"
           api_location: ""
