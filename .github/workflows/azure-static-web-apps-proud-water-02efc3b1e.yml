@@ -22,7 +22,7 @@ jobs:
 
       - name: Check Azure Token Presence
         run: |
-          if [ -z "${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER_02EFC3B1E }}" ]; then
+          if [ -z "${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER }}" ]; then
             echo "❌ Token is NOT set."
             exit 1
           else
