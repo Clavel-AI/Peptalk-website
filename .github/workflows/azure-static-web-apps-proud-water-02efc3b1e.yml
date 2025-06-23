@@ -26,7 +26,7 @@ jobs:
             echo "❌ Token is NOT set."
             exit 1
           else
-            echo "✅ Token is present. Length: ${#AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER}"
+            echo "✅ Token is present. Length: ${{ length(secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER) }}"
           fi
 
       - name: Build And Deploy
@@ -34,6 +34,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/"
           api_location: ""
@@ -48,4 +49,5 @@ jobs:
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER }}
           action: "close"
