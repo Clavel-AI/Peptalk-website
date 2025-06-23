@@ -26,8 +26,9 @@ jobs:
             echo "❌ Token is NOT set."
             exit 1
           else
-            echo "✅ Token is present. Length: ${{ length(secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PROUD_WATER) }}"
+            echo "✅ Token is present."
           fi
+
 
       - name: Build And Deploy
         id: builddeploy
