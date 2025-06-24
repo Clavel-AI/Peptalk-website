@@ -1,4 +1,5 @@
 import Image from "next/image"
+import india from "../public/images/India.png"
 
 export default function PhoneMockup() {
   return (
@@ -22,19 +23,19 @@ export default function PhoneMockup() {
 
           {/* English - top right */}
           <div className="absolute -right-16 top-32 md:right-24 md:top-40 flex items-center space-x-2 bg-white rounded-full px-3 py-1.5 shadow-md border border-gray-100">
-            <Image src="/images/india.png" alt="English flag" width={24} height={24} className="rounded-full" />
+            <Image src={india} alt="English flag" width={24} height={24} className="rounded-full" />
             <span className="text-xs font-medium text-gray-700">English</span>
           </div>
 
           {/* हिंदी - left side */}
           <div className="absolute -left-12 bottom-44 md:left-20 md:bottom-52 flex items-center space-x-2 bg-white rounded-full px-3 py-1.5 shadow-md border border-gray-100">
-            <Image src="/images/india.png" alt="Hindi flag" width={24} height={24} className="rounded-full" />
+            <Image src={india} alt="Hindi flag" width={24} height={24} className="rounded-full" />
             <span className="text-xs font-medium text-gray-700">हिंदी</span>
           </div>
 
           {/* Deutsch - bottom right */}
           <div className="absolute -right-12 bottom-32 md:right-20 md:bottom-80 flex items-center space-x-2 bg-white rounded-full px-3 py-1.5 shadow-md border border-gray-100">
-            <Image src="/images/Français.webp" alt="German flag" width={24} height={24} className="rounded-full" />
+            <Image src="/images/Deu.png" alt="German flag" width={24} height={24} className="rounded-full" />
             <span className="text-xs font-medium text-gray-700">Deutsch</span>
           </div>
 

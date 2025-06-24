@@ -234,7 +234,7 @@ export default function Footer() {
                                         href="https://www.linkedin.com/company/clavelai/"
                                         className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                                     >
-                                        <span className="w-1 h-1 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                        <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         Social Media
                                     </Link>
                                 </li>
@@ -243,7 +243,7 @@ export default function Footer() {
                                         href="https://clavel.ai/contacts/"
                                         className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                                     >
-                                        <span className="w-1 h-1 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                        <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         Contact Us
                                     </Link>
                                 </li>
@@ -259,19 +259,19 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 <li>
                                     <a 
-                                        href="#"
+                                        href="/terms"
                                         className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                                     >
-                                        <span className="w-1 h-1 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                        <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         Terms & Conditions
                                     </a>
                                 </li>
                                 <li>
                                     <Link 
-                                        href="https://clavel.ai/privacy-policy/"
+                                        href="/privacy"
                                         className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                                     >
-                                        <span className="w-1 h-1 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                        <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         Privacy Policy
                                     </Link>
                                 </li>
@@ -287,7 +287,7 @@ export default function Footer() {
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <div className="w-5 h-5 bg-gray-800 rounded flex items-center justify-center mt-0.5 flex-shrink-0">
-                                        <span className="text-yellow-400 text-xs">📍</span>
+                                        <span className="text-[#3971C0] text-xs">📍</span>
                                     </div>
                                     <span className="text-gray-400 text-sm leading-relaxed">
                                         121 Gemini, Irvine, CA 92618, USA

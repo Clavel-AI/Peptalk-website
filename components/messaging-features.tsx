@@ -1,7 +1,6 @@
-// app/features/page.tsx
 'use client';
 
-import { ArrowLeft, ArrowRight, Languages, Mic, TextQuote } from 'lucide-react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 const features = [
@@ -15,66 +14,113 @@ const features = [
     icon: <Image src="/images/Frame 60 (1).png" alt="Group Chat" width={80} height={80} className="rounded-full" />,
     title: "Built-In Translation Tools",
     description:
-      "Speak or type in your own language while PepTalk translates everything in real time. Peptalk’s Voice-to-text and multi-language threads keep the conversation natural for everyone.",
+      "Speak or type in your own language while PepTalk translates everything in real time.",
   },
   {
     icon: <Image src="/images/Frame 61 (1).png" alt="File Sharing" width={80} height={80} className="rounded-full" />,
     title: "Secure and Flexible Features",
     description:
-      "Keep your messages protected with encryption, stay updated with notifications, and back up your chats anytime. You can also customize themes and use voice or video calls when needed.",
+      "Keep your messages protected with encryption and use voice or video calls when needed.",
+  },
+  {
+    icon: <Image src="/images/Frame 61 (1).png" alt="Privacy" width={80} height={80} className="rounded-full" />,
+    title: "Private Group Chats",
+    description:
+      "Create private group chats and stay connected with your inner circle securely.",
+  },
+  {
+    icon: <Image src="/images/Frame 61 (1).png" alt="Voice Notes" width={80} height={80} className="rounded-full" />,
+    title: "Quick Voice Notes",
+    description:
+      "Send quick voice notes when you’re walking or driving and can’t type.",
   },
 ];
 
 export default function FeaturesPage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const cardsPerPage = 3;
+  const totalFeatures = features.length;
+  const totalPages = Math.ceil(totalFeatures / cardsPerPage);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
   return (
-    <div className=" bg-white p-6 pt-16 pb-6">
-      <div className=" mx-auto flex flex-col lg:flex-row gap-12">
+    <div className="bg-white p-6 pt-16 pb-6">
+      <div className="mx-auto flex flex-col lg:flex-row gap-12">
         {/* Left Section */}
-        <div className="lg:w-[30%] w-[30%] space-y-5">
+        <div className="lg:w-[30%] w-full space-y-5">
           <p className="font-semibold text-sm text-gray-600">Features</p>
-          <h2 className="text-[35px] md:text-[35px] font-bold leading-snug">
+          <h2 className="text-[35px] font-bold leading-snug">
             Why You’ll Love Messaging with Loved Ones
           </h2>
           <p className="text-[#6E6E6E] text-[17px] max-w-md">
-            Use PepTalk to send messages, share files, react to conversations, and record voice notes. Join group chats or talk one-on-one using features that support everyday communication.
+            Use PepTalk to send messages, share files, and record voice notes. Join group chats or talk one-on-one using features that support everyday communication.
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="lg:w-[70%] ">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="border rounded-3xl p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition"
-              >
-                <div className="bg-[#3971C0] w-20 h-20 rounded-full flex items-center justify-center">
-                  {feature.icon}
+        <div className="lg:w-[70%] overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              width: `${totalPages * 100}%`,
+              transform: `translateX(-${(currentSlide * 100) / totalPages}%)`,
+            }}
+          >
+            {Array.from({ length: totalPages }).map((_, pageIndex) => {
+              const start = pageIndex * cardsPerPage;
+              const end = start + cardsPerPage;
+              const pageFeatures = features.slice(start, end);
+              const widthClass =
+                pageFeatures.length === 2
+                  ? 'w-[48%]'
+                  : pageFeatures.length === 1
+                  ? 'w-[100%]'
+                  : 'w-[32%]';
+
+              return (
+                <div
+                  key={pageIndex}
+                  className="w-full flex justify-between px-2"
+                >
+                  {pageFeatures.map((feature, index) => (
+                    <div
+                      key={index}
+                      className={`${widthClass} border rounded-3xl p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition`}
+                    >
+                      <div className="bg-[#3971C0] w-20 h-20 rounded-full flex items-center justify-center">
+                        {feature.icon}
+                      </div>
+                      <h3 className="font-bold text-[23px]">{feature.title}</h3>
+                      <p className="text-[17px] text-[#6E6E6E]">{feature.description}</p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="font-bold text-[23px]">{feature.title}</h3>
-                <p className="text-[17px] text-[#6E6E6E]">{feature.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
 
-       <div className="flex justify-end gap-4 mt-10 pr-6 mx-auto ">
-        <div className="w-14 h-14 rounded-3xl bg-[#F4F9FF] flex items-center justify-center hover:bg-gray-200 cursor-pointer">
-          <Image
-            src="/images/Left.png"
-            alt="Left Arrow"
-            width={24}
-            height={24}
-          />
+      {/* Navigation Arrows */}
+      <div className="flex justify-end gap-4 mt-10 pr-6 mx-auto">
+        <div
+          className="w-14 h-14 rounded-3xl bg-[#F4F9FF] flex items-center justify-center hover:bg-gray-200 cursor-pointer"
+          onClick={prevSlide}
+        >
+          <Image src="/images/Left.png" alt="Left Arrow" width={24} height={24} />
         </div>
-        <div className="w-14 h-14 rounded-3xl bg-[#F4F9FF] flex items-center justify-center hover:bg-gray-200 cursor-pointer">
-          <Image
-            src="/images/Right.png"
-            alt="Right Arrow"
-            width={24}
-            height={24}
-          />
+        <div
+          className="w-14 h-14 rounded-3xl bg-[#F4F9FF] flex items-center justify-center hover:bg-gray-200 cursor-pointer"
+          onClick={nextSlide}
+        >
+          <Image src="/images/Right.png" alt="Right Arrow" width={24} height={24} />
         </div>
       </div>
     </div>
