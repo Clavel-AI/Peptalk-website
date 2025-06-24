@@ -2,13 +2,13 @@ import Image from "next/image"
 
 export default function PhoneMockup() {
   return (
-    <section className="relative container mx-auto px-4 pb-16">
+    <section className="relative mx-auto px-4 bg-[#F4F9FF]">
       {/* Background Moving Text */}
-      <div className="absolute inset-0 top-[20%] z-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 top-[20%] z-0 overflow-hidden pointer-events-none">
         <h2 className="text-[15vw] animate-marquee md:text-[10vw] font-bold text-[#3971C0] whitespace-nowrap">
           You Text, We Translate.
         </h2>
-      </div>
+      </div> */}
 
       {/* Phone and language bubbles */}
       <div className="relative z-10 flex justify-center max-w-3xl mx-auto">

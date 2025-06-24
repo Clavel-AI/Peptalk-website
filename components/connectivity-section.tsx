@@ -3,19 +3,19 @@ import Image from "next/image";
 
 export default function ConnectivitySection() {
   return (
-    <section className="pb-16 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="pb-16 pt-10 bg-white">
+      <div className="mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 text-center lg:text-left">
             <span className="text-[18px] font-bold text-black-600 tracking-wide">Innovative</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              Experience Seamless Connectivity
+              Chat Across Languages Without
               <br />
-              Like Never Before
-            </h2>
+              Switching Apps
+             </h2>
             <p className="text-lg text-[#6E6E6E] leading-relaxed">
-              Our app revolutionizes the way you connect with others. Enjoy instant communication and effortless sharing.
+              PepTalk works for everyday chats and professional conversations. It translates everything instantly while you enjoy chatting.
             </p>
             <Button className="bg-[#3971C0] hover:bg-[#3971C0] text-white px-8 py-3 rounded-xl text-base font-medium">
               Download App
@@ -47,9 +47,9 @@ export default function ConnectivitySection() {
                 height={250}
                 className="mx-auto"
               />
-              <div className="mt-2 absolute right-[60%] top-[50%] text-[#3971C0] px-3 py-2 rounded-tl-xl rounded-tr-xl rounded-bl-xl bg-white text-sm">
-                Эй, ты как ?
-              </div>
+                <div className="mt-2 absolute right-[60%] top-[50%] text-[#3971C0] px-3 py-2 rounded-tl-xl rounded-tr-xl rounded-bl-xl bg-white text-sm">
+                अरे, कैसे हो?
+                </div>
             </div>
           </div>
         </div>

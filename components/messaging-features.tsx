@@ -6,29 +6,29 @@ import Image from 'next/image';
 
 const features = [
   {
-    icon: <TextQuote className="h-6 w-6 text-white" />,
-    title: "Smart Instant Translation",
+    icon: <Image src="/images/Frame 59 (2).png" alt="Phone Mockup" width={80} height={80} className="rounded-full" />,
+    title: "Easy Messaging Setup",
     description:
-      "Your messages are translated in real time, so conversations flow naturally across any language.",
+      "Set up your profile in a few steps and start messaging instantly. PepTalk supports one-on-one chats with a clean interface.",
   },
   {
-    icon: <Mic className="h-6 w-6 text-white" />,
-    title: "Voice-to-Text Translator",
+    icon: <Image src="/images/Frame 60 (1).png" alt="Group Chat" width={80} height={80} className="rounded-full" />,
+    title: "Built-In Translation Tools",
     description:
-      "Speak in your language, and the app converts it into translated text instantly for the other user.",
+      "Speak or type in your own language while PepTalk translates everything in real time. Peptalk’s Voice-to-text and multi-language threads keep the conversation natural for everyone.",
   },
   {
-    icon: <Languages className="h-6 w-6 text-white" />,
-    title: "Multi Language Threads",
+    icon: <Image src="/images/Frame 61 (1).png" alt="File Sharing" width={80} height={80} className="rounded-full" />,
+    title: "Secure and Flexible Features",
     description:
-      "Each user sees the same conversation in their preferred language—automatically and accurately.",
+      "Keep your messages protected with encryption, stay updated with notifications, and back up your chats anytime. You can also customize themes and use voice or video calls when needed.",
   },
 ];
 
 export default function FeaturesPage() {
   return (
-    <div className=" bg-white p-6 py-16">
-      <div className=" mx-auto flex flex-col lg:flex-row gap-12 container">
+    <div className=" bg-white p-6 pt-16 pb-6">
+      <div className=" mx-auto flex flex-col lg:flex-row gap-12">
         {/* Left Section */}
         <div className="lg:w-[30%] w-[30%] space-y-5">
           <p className="font-semibold text-sm text-gray-600">Features</p>
@@ -36,9 +36,7 @@ export default function FeaturesPage() {
             Why You’ll Love Messaging with Loved Ones
           </h2>
           <p className="text-[#6E6E6E] text-[17px] max-w-md">
-            Stay close, no matter the language. Our real-time translation makes every message feel
-            personal, clear, and effortless—so nothing gets lost between you and the people who
-            matter most.
+            Use PepTalk to send messages, share files, react to conversations, and record voice notes. Join group chats or talk one-on-one using features that support everyday communication.
           </p>
         </div>
 
@@ -61,8 +59,7 @@ export default function FeaturesPage() {
         </div>
       </div>
 
-      {/* Arrows */}
-      {/* <div className="flex justify-end gap-4 mt-10 pr-6 mx-auto container">
+       <div className="flex justify-end gap-4 mt-10 pr-6 mx-auto ">
         <div className="w-14 h-14 rounded-3xl bg-[#F4F9FF] flex items-center justify-center hover:bg-gray-200 cursor-pointer">
           <Image
             src="/images/Left.png"
@@ -79,7 +76,7 @@ export default function FeaturesPage() {
             height={24}
           />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
