@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <section className="w-full bg-[#f4f9ff] py-10 px-4 pb-[4.5rem]">
-      <div className="mx-auto h-[350px] bg-gradient-to-r from-[#4a90e2] to-[#003087] text-white rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between">
+      <div className="mx-auto bg-gradient-to-r from-[#4a90e2] to-[#003087] text-white rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between">
 
         <div className="md:w-1/2 h-full flex flex-col justify-between text-center md:text-left">
           <div className='w-[70%] mb-6 md:mb-0'>
@@ -53,7 +53,7 @@ export default function Home() {
             alt="App Preview"
             width={800}
             height={800}
-            className="object-contain absolute -right-8 -bottom-44"
+            className="object-contain absolute -right-8 -bottom-[150px]"
           />
         </div>
       </div>

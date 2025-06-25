@@ -1,60 +1,55 @@
-'use client';
+"use client"
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react"
+import Image from "next/image"
+import { Shield, MessageCircle, FileText, Video, Settings, Bell } from "lucide-react"
 
 const features = [
   {
-    icon: <Image src="/images/Frame 59 (2).png" alt="Phone Mockup" width={80} height={80} className="rounded-full" />,
+    icon: <Shield className="w-8 h-8 text-white" />,
     title: "Message securely",
-    description:
-      "Your chats are encrypted and saved safely with backup support.",
+    description: "Your chats are encrypted and saved safely with backup support.",
   },
   {
-    icon: <Image src="/images/Frame 60 (1).png" alt="Group Chat" width={80} height={80} className="rounded-full" />,
+    icon: <MessageCircle className="w-8 h-8 text-white" />,
     title: "Start private or group chats",
-    description:
-      "Chat one-on-one or in groups, and use message reactions to respond quickly.",
+    description: "Chat one-on-one or in groups, and use message reactions to respond quickly.",
   },
   {
-    icon: <Image src="/images/Frame 61 (1).png" alt="File Sharing" width={80} height={80} className="rounded-full" />,
+    icon: <FileText className="w-8 h-8 text-white" />,
     title: "Share files easily",
-    description:
-      "Send documents, photos, voice notes, and other media in any conversation.",
+    description: "Send documents, photos, voice notes, and other media in any conversation.",
   },
   {
-    icon: <Image src="/images/Frame 61 (1).png" alt="Privacy" width={80} height={80} className="rounded-full" />,
+    icon: <Video className="w-8 h-8 text-white" />,
     title: "Call with voice or video",
-    description:
-      "Switch from text to voice or video calls whenever needed.",
+    description: "Switch from text to voice or video calls whenever needed.",
   },
   {
-    icon: <Image src="/images/Frame 61 (1).png" alt="Voice Notes" width={80} height={80} className="rounded-full" />,
+    icon: <Settings className="w-8 h-8 text-white" />,
     title: "Personalize your experience",
-    description:
-      "Set up your profile, choose a theme, and start chatting.",
+    description: "Set up your profile, choose a theme, and start chatting.",
   },
-    {
-    icon: <Image src="/images/Frame 61 (1).png" alt="Voice Notes" width={80} height={80} className="rounded-full" />,
+  {
+    icon: <Bell className="w-8 h-8 text-white" />,
     title: "Get real-time alerts",
-    description:
-      "Stay notified about messages, calls, profile updates, and people near you.",
+    description: "Stay notified about messages, calls, profile updates, and people near you.",
   },
-];
+]
 
 export default function FeaturesPage() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const cardsPerPage = 3;
-  const totalFeatures = features.length;
-  const totalPages = Math.ceil(totalFeatures / cardsPerPage);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const cardsPerPage = 3
+  const totalFeatures = features.length
+  const totalPages = Math.ceil(totalFeatures / cardsPerPage)
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalPages);
-  };
+    setCurrentSlide((prev) => (prev + 1) % totalPages)
+  }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalPages) % totalPages);
-  };
+    setCurrentSlide((prev) => (prev - 1 + totalPages) % totalPages)
+  }
 
   return (
     <div className="bg-white p-6 pt-16 pb-6">
@@ -62,11 +57,10 @@ export default function FeaturesPage() {
         {/* Left Section */}
         <div className="lg:w-[30%] w-full space-y-5">
           <p className="font-semibold text-sm text-gray-600">Features</p>
-          <h2 className="text-[35px] font-bold leading-snug">
-            Why You’ll Love Messaging with Loved Ones
-          </h2>
+          <h2 className="text-[35px] font-bold leading-snug">Why You'll Love Messaging with Loved Ones</h2>
           <p className="text-[#6E6E6E] text-[17px] max-w-md">
-            Use PepTalk to send messages, share files, and record voice notes. Join group chats or talk one-on-one using features that support everyday communication.
+            Use PepTalk to send messages, share files, and record voice notes. Join group chats or talk one-on-one using
+            features that support everyday communication.
           </p>
         </div>
 
@@ -80,21 +74,14 @@ export default function FeaturesPage() {
             }}
           >
             {Array.from({ length: totalPages }).map((_, pageIndex) => {
-              const start = pageIndex * cardsPerPage;
-              const end = start + cardsPerPage;
-              const pageFeatures = features.slice(start, end);
+              const start = pageIndex * cardsPerPage
+              const end = start + cardsPerPage
+              const pageFeatures = features.slice(start, end)
               const widthClass =
-                pageFeatures.length === 2
-                  ? 'w-[48%]'
-                  : pageFeatures.length === 1
-                  ? 'w-[100%]'
-                  : 'w-[32%]';
+                pageFeatures.length === 2 ? "w-[48%]" : pageFeatures.length === 1 ? "w-[100%]" : "w-[32%]"
 
               return (
-                <div
-                  key={pageIndex}
-                  className="w-full flex justify-between px-2"
-                >
+                <div key={pageIndex} className="w-full flex justify-between px-2">
                   {pageFeatures.map((feature, index) => (
                     <div
                       key={index}
@@ -108,7 +95,7 @@ export default function FeaturesPage() {
                     </div>
                   ))}
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -130,5 +117,5 @@ export default function FeaturesPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -47,7 +47,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % translations.length);
-    }, 1000);
+    }, 1500);
 
     return () => clearInterval(timer);
   }, []);
