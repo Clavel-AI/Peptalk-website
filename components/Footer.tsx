@@ -315,20 +315,6 @@ export default function Footer() {
     }
   }
 
-  const testConnection = async () => {
-    try {
-      const response = await fetch("/api/test", {
-        method: "GET",
-      })
-      const data = await response.json()
-      console.log("Test response:", data)
-      alert(`Test ${data.success ? "successful" : "failed"}: ${data.message}`)
-    } catch (err) {
-      console.error("Test error:", err)
-      alert("Test failed: " + err)
-    }
-  }
-
   return (
     <footer className="bg-black text-white">
       {/* Newsletter Section */}
