@@ -1,7 +1,16 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function ConnectivitySection() {
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <section className="pb-16 pt-10 bg-white">
       <div className="mx-auto px-6">
@@ -17,7 +26,7 @@ export default function ConnectivitySection() {
             <p className="text-lg text-[#6E6E6E] leading-relaxed">
               PepTalk works for everyday chats and professional conversations. It translates everything instantly while you enjoy chatting.
             </p>
-            <Button className="bg-[#3971C0] hover:bg-[#3971C0] text-white px-8 py-3 rounded-xl text-base font-medium">
+            <Button onClick={() => scrollToSection('download')} className="bg-[#3971C0] hover:bg-[#3971C0] text-white px-8 py-3 rounded-xl text-base font-medium">
               Download App
             </Button>
           </div>

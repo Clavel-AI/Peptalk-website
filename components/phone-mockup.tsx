@@ -1,5 +1,6 @@
 import Image from "next/image"
 import india from "../public/images/India.png"
+import usa from "../public/images/usa.png"
 
 export default function PhoneMockup() {
   return (
@@ -23,7 +24,7 @@ export default function PhoneMockup() {
 
           {/* English - top right */}
           <div className="absolute -right-16 top-32 md:right-24 md:top-40 flex items-center space-x-2 bg-white rounded-full px-3 py-1.5 shadow-md border border-gray-100">
-            <Image src={india} alt="English flag" width={24} height={24} className="rounded-full" />
+            <Image src={usa} alt="English flag" width={24} height={24} className="rounded-full" />
             <span className="text-xs font-medium text-gray-700">English</span>
           </div>
 

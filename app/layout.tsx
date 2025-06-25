@@ -14,11 +14,15 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "PepTalk - Talk Native. Translate Instantly. Connect Globally.",
+  title: "PepTalk - Your Real-Time Multilingual Messaging App",
   description:
     "No more switching apps or copying texts. Message in your language—they read in theirs. Seamless. Instant. Human.",
   generator: "v0.dev",
+  icons: {
+    icon: "/Simplification.png", // you can also use png or svg here
+  },
 };
+
 
 export default function RootLayout({
   children,

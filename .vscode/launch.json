@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Azure Functions",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "func: host start",
+      "program": "${workspaceFolder}/node_modules/azure-functions-core-tools/bin/func",
+      "args": ["host", "start", "--verbose"],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    }
+  ]
+}

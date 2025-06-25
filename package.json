@@ -9,6 +9,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@azure/functions": "^4.7.3-beta.0",
+    "@azure/storage-blob": "^12.27.0",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
