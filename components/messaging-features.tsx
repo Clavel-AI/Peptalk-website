@@ -6,33 +6,39 @@ import Image from 'next/image';
 const features = [
   {
     icon: <Image src="/images/Frame 59 (2).png" alt="Phone Mockup" width={80} height={80} className="rounded-full" />,
-    title: "Easy Messaging Setup",
+    title: "Message securely",
     description:
-      "Set up your profile in a few steps and start messaging instantly. PepTalk supports one-on-one chats with a clean interface.",
+      "Your chats are encrypted and saved safely with backup support.",
   },
   {
     icon: <Image src="/images/Frame 60 (1).png" alt="Group Chat" width={80} height={80} className="rounded-full" />,
-    title: "Built-In Translation Tools",
+    title: "Start private or group chats",
     description:
-      "Speak or type in your own language while PepTalk translates everything in real time.",
+      "Chat one-on-one or in groups, and use message reactions to respond quickly.",
   },
   {
     icon: <Image src="/images/Frame 61 (1).png" alt="File Sharing" width={80} height={80} className="rounded-full" />,
-    title: "Secure and Flexible Features",
+    title: "Share files easily",
     description:
-      "Keep your messages protected with encryption and use voice or video calls when needed.",
+      "Send documents, photos, voice notes, and other media in any conversation.",
   },
   {
     icon: <Image src="/images/Frame 61 (1).png" alt="Privacy" width={80} height={80} className="rounded-full" />,
-    title: "Private Group Chats",
+    title: "Call with voice or video",
     description:
-      "Create private group chats and stay connected with your inner circle securely.",
+      "Switch from text to voice or video calls whenever needed.",
   },
   {
     icon: <Image src="/images/Frame 61 (1).png" alt="Voice Notes" width={80} height={80} className="rounded-full" />,
-    title: "Quick Voice Notes",
+    title: "Personalize your experience",
     description:
-      "Send quick voice notes when you’re walking or driving and can’t type.",
+      "Set up your profile, choose a theme, and start chatting.",
+  },
+    {
+    icon: <Image src="/images/Frame 61 (1).png" alt="Voice Notes" width={80} height={80} className="rounded-full" />,
+    title: "Get real-time alerts",
+    description:
+      "Stay notified about messages, calls, profile updates, and people near you.",
   },
 ];
 
