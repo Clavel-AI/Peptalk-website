@@ -53,7 +53,7 @@ export default async function (request: HttpRequest, context: InvocationContext)
 
     // Create blob service client
     const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString)
-    const containerName = "email-subscriptions"
+    const containerName = "subscribers"
     const containerClient = blobServiceClient.getContainerClient(containerName)
 
     // Create container if it doesn't exist

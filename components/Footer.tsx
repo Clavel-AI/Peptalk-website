@@ -368,13 +368,7 @@ export default function Footer() {
                 >
                   {loading ? "Subscribing..." : "Subscribe"}
                 </button>
-                <button
-                  type="button"
-                  onClick={testConnection}
-                  className="bg-gray-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-200 text-sm"
-                >
-                  Test API
-                </button>
+                
               </div>
 
               {error && (
