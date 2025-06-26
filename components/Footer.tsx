@@ -118,7 +118,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="px-6 py-12">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
             {/* Company Logo & Description */}
             <div className="lg:col-span-1">
               <div className="mb-6">
@@ -163,6 +163,24 @@ export default function Footer() {
                     Contact Us
                   </Link>
                 </li>
+                <li>
+                  <Link
+                  href="#features"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                  <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Features
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                  href="#features"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                  <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Security
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -173,6 +191,15 @@ export default function Footer() {
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
               </h4>
               <ul className="space-y-3">
+                                <li>
+                  <a
+                    href="https://clavel.ai/about-us/"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    About us
+                  </a>
+                </li>
                 <li>
                   <a
                     href="/terms"
@@ -190,6 +217,42 @@ export default function Footer() {
                     <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Privacy Policy
                   </Link>
+                </li>
+                <li>
+                  <Link
+                  href="#features"
+                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                  <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Help Center
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-semibold text-lg mb-6 relative">
+                Use Peptalk
+                <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
+              </h4>
+              <ul className="space-y-3">
+                                <li>
+                  <a
+                    href="https://play.google.com/store/apps/datasafety?id=com.webstore&hl=en"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Android
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.apple.com/in/app-store/"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    IPhone
+                  </a>
                 </li>
               </ul>
             </div>

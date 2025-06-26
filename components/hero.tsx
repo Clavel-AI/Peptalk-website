@@ -16,6 +16,11 @@ export default function Hero() {
       lang: "hi"
     },
     {
+      line1: "మీ రియల్-టైమ్ బహుభాషా",
+      line2: "మెసేజింగ్ యాప్",
+      lang: "te"
+    },
+    {
       line1: "तुमचे रीअल-टाइम बहुभाषिक",
       line2: "मेसेजिंग अॅप",
       lang: "mr"
@@ -47,7 +52,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % translations.length);
-    }, 1500);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, []);
