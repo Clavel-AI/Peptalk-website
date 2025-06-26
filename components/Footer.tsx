@@ -30,11 +30,16 @@ export default function Footer() {
       console.log("Subscription response:", response)
 
       if (!response.ok) {
-        throw new Error("Subscription failed")
+        throw new Error("Already Subscribed !")
       }
 
       setSuccess(true)
       setEmail("")
+
+      setTimeout(() => {
+        setSuccess(false)
+      }, 2000)
+
     } catch (err) {
       let errorMessage = "Failed to subscribe. Please try again later."
 
@@ -88,7 +93,7 @@ export default function Footer() {
                 >
                   {loading ? "Subscribing..." : "Subscribe"}
                 </button>
-                
+
               </div>
 
               {error && (
@@ -133,8 +138,8 @@ export default function Footer() {
                   />
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Empowering conversations with AI-powered insights and seamless communication experiences.
-                </p>
+                  Use PepTalk to talk freely with real-time translation in every message. 
+                 </p>
               </div>
             </div>
 
@@ -147,11 +152,29 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="https://www.linkedin.com/company/clavelai/"
+                    href="https://clavel.ai/about-us/"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    Social Media
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#features"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -161,24 +184,6 @@ export default function Footer() {
                   >
                     <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                  href="#features"
-                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
-                  >
-                  <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Features
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                  href="#features"
-                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
-                  >
-                  <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Security
                   </Link>
                 </li>
               </ul>
@@ -191,15 +196,6 @@ export default function Footer() {
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
               </h4>
               <ul className="space-y-3">
-                                <li>
-                  <a
-                    href="https://clavel.ai/about-us/"
-                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    About us
-                  </a>
-                </li>
                 <li>
                   <a
                     href="/terms"
@@ -210,21 +206,30 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <Link
+                  <a
                     href="/privacy"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href="/security"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Security Practices
                   </Link>
                 </li>
                 <li>
                   <Link
-                  href="#features"
-                  className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                    href="/help"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                  <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Help Center
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    Help Center
                   </Link>
                 </li>
               </ul>
@@ -236,7 +241,7 @@ export default function Footer() {
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
               </h4>
               <ul className="space-y-3">
-                                <li>
+                <li>
                   <a
                     href="https://play.google.com/store/apps/datasafety?id=com.webstore&hl=en"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
@@ -252,6 +257,24 @@ export default function Footer() {
                   >
                     <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     IPhone
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/guide"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    App Guide
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/fqa"
+                    className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    FAQs
                   </a>
                 </li>
               </ul>
@@ -314,9 +337,27 @@ export default function Footer() {
                 <Link
                   href="https://x.com/PepTalkchat"
                   className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors group"
-                  aria-label="Follow us on Twitter"
+                  aria-label="Follow us on X (Twitter)"
                 >
-                  <Twitter className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+                  <svg className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </Link>
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61577400763292"
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors group"
+                  aria-label="Follow us on Facebook"
+                >
+                  <Facebook className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+                </Link>
+                <Link
+                  href="https://www.youtube.com/@PepTalkchat"
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors group"
+                  aria-label="Follow us on YouTube"
+                >
+                  <svg className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
                 </Link>
               </div>
 
