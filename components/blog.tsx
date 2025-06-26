@@ -7,91 +7,37 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  tags: string[];
+  image?: string;
+  author: string;
+  date: string;
+  readTime: string;
+  featured?: boolean;
+}
+
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [searchTerm, setSearchTerm] = useState("")
 
   const categories = ["All", "Product Updates", "Translation Tips", "Security", "User Stories", "Company News"]
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Introducing PepTalk 3.0: Enhanced AI Translation and New Features",
-      excerpt:
-        "We're excited to announce the launch of PepTalk 3.0 with improved AI translation accuracy, new voice features, and enhanced security measures.",
-      author: "Sarah Chen",
-      date: "2024-01-15",
-      category: "Product Updates",
-      readTime: "5 min read",
-      featured: true,
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["AI", "Translation", "Update"],
-    },
-    {
-      id: 2,
-      title: "10 Tips for Better Cross-Cultural Communication",
-      excerpt:
-        "Learn how to communicate more effectively across cultures using PepTalk's advanced features and best practices for international messaging.",
-      author: "Maria Rodriguez",
-      date: "2024-01-12",
-      category: "Translation Tips",
-      readTime: "8 min read",
-      featured: false,
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Communication", "Culture", "Tips"],
-    },
-    {
-      id: 3,
-      title: "How End-to-End Encryption Protects Your Multilingual Conversations",
-      excerpt:
-        "Understanding the security measures that keep your translated messages private and secure across all languages and devices.",
-      author: "David Kim",
-      date: "2024-01-10",
-      category: "Security",
-      readTime: "6 min read",
-      featured: false,
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Security", "Encryption", "Privacy"],
-    },
-    {
-      id: 4,
-      title: "Success Story: How PepTalk Connected a Global Remote Team",
-      excerpt:
-        "Discover how a multinational company used PepTalk to improve communication and collaboration across 15 different languages.",
-      author: "Jennifer Park",
-      date: "2024-01-08",
-      category: "User Stories",
-      readTime: "7 min read",
-      featured: false,
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Success Story", "Remote Work", "Global"],
-    },
-    {
-      id: 5,
-      title: "The Science Behind Real-Time Translation: How PepTalk Works",
-      excerpt:
-        "A deep dive into the AI and machine learning technologies that power PepTalk's instant translation capabilities.",
-      author: "Dr. Alex Thompson",
-      date: "2024-01-05",
-      category: "Product Updates",
-      readTime: "10 min read",
-      featured: false,
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["AI", "Technology", "Translation"],
-    },
-    {
-      id: 6,
-      title: "PepTalk Reaches 10 Million Users Worldwide",
-      excerpt: "Celebrating this major milestone and sharing our vision for the future of multilingual communication.",
-      author: "CEO Michael Johnson",
-      date: "2024-01-03",
-      category: "Company News",
-      readTime: "4 min read",
-      featured: false,
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Milestone", "Growth", "Community"],
-    },
-  ]
+  const blogPosts: BlogPost[] = []
+
+  if (blogPosts.length === 0) {
+    return (
+      <div className="h-[400px] flex flex-col items-center justify-center text-center bg-white">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">No Blogs Yet</h1>
+        <p className="text-gray-500 text-lg max-w-md">
+          We’re working on bringing you exciting content. Please check back soon!
+        </p>
+      </div>
+    )
+  }
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = selectedCategory === "All" || post.category === selectedCategory
@@ -115,8 +61,6 @@ export default function BlogPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Stay updated with the latest news, tips, and insights about multilingual communication
           </p>
-
-          {/* Search Bar */}
           <div className="max-w-2xl mx-auto relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
@@ -202,7 +146,7 @@ export default function BlogPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post) => (
+            {filteredPosts.map((post) => (
               <Card key={post.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow cursor-pointer group">
                 <div className="bg-gray-200 aspect-video overflow-hidden">
                   <img
@@ -261,7 +205,7 @@ export default function BlogPage() {
             </div>
           )}
         </div>
-      </section>    
+      </section>
     </div>
   )
 }

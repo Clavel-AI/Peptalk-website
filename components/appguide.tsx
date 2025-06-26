@@ -36,21 +36,22 @@ export default function AppGuidePage() {
       tips: ["Use a clear profile photo for better recognition", "You can add more languages later in settings"],
     },
     {
-      id: "translation",
+      id: "contacts",
       icon: Globe,
-      title: "Enable Translation",
-      description: "Set up real-time translation",
+      title: "Sync Contacts",
+      description: "Import your contacts and invite friends",
       steps: [
-        "Go to Settings > Languages & Translation",
-        "Toggle 'Auto-translate incoming messages' ON",
-        "Select your preferred translation languages",
-        "Choose translation quality (Standard or High)",
-        "Enable 'Show original message' if desired",
-        "Test translation by sending a message to yourself",
+        "Go to Settings > Contacts",
+        "Tap 'Sync Contacts' button",
+        "Allow PepTalk to access your contacts when prompted",
+        "Wait for contacts to sync",
+        "View your contacts in the PepTalk directory",
+        "Tap 'Invite' button next to non-PepTalk users",
       ],
       tips: [
-        "High quality translation uses more data but is more accurate",
-        "You can translate individual messages by long-pressing them",
+        "Only phone numbers from your contacts will be synced",
+        "You can manually refresh contacts list by pulling down",
+        "Green indicators show which contacts are already on PepTalk"
       ],
     },
     {
@@ -80,30 +81,29 @@ export default function AppGuidePage() {
         "Tap 'New Chat' then select 'New Group'",
         "Add participants from your contacts",
         "Set a group name and description",
-        "Choose group language settings",
         "Enable 'Multilingual mode' for the group",
         "Start your multilingual group conversation",
       ],
       tips: ["Each member can set their preferred language", "Group admins can manage translation settings"],
     },
-    {
-      id: "security",
-      icon: Shield,
-      title: "Security Setup",
-      description: "Secure your account and messages",
-      steps: [
-        "Go to Settings > Account > Security",
-        "Enable Two-Step Verification",
-        "Create a secure 6-digit PIN",
-        "Add a recovery email address",
-        "Enable App Lock with fingerprint/face ID",
-        "Review privacy settings and adjust as needed",
-      ],
-      tips: [
-        "Use a PIN that's easy for you to remember but hard for others to guess",
-        "Regularly update your recovery information",
-      ],
-    },
+    // {
+    //   id: "security",
+    //   icon: Shield,
+    //   title: "Security Setup",
+    //   description: "Secure your account and messages",
+    //   steps: [
+    //     "Go to Settings > Account > Security",
+    //     "Enable Two-Step Verification",
+    //     "Create a secure 6-digit PIN",
+    //     "Add a recovery email address",
+    //     "Enable App Lock with fingerprint/face ID",
+    //     "Review privacy settings and adjust as needed",
+    //   ],
+    //   tips: [
+    //     "Use a PIN that's easy for you to remember but hard for others to guess",
+    //     "Regularly update your recovery information",
+    //   ],
+    // },
   ]
 
   const quickTips = [

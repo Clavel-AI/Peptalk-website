@@ -351,7 +351,7 @@ export default function Footer() {
                   <Facebook className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
                 </Link>
                 <Link
-                  href="https://www.youtube.com/@PepTalkchat"
+                  href="https://www.youtube.com/@PepTalk_chat"
                   className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors group"
                   aria-label="Follow us on YouTube"
                 >

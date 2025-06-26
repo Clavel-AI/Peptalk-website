@@ -21,17 +21,17 @@ export default function FAQPage() {
         {
           question: "How do I create a PepTalk account?",
           answer:
-            "To create a PepTalk account, download the app from your device's app store, open it, and follow the registration process. You'll need to verify your phone number and set up your profile with your preferred languages.",
+          "You can create a PepTalk account by downloading the app from the App Store or Google Play. Once installed, open the app, verify your phone number, and complete your profile by selecting your preferred languages."
         },
         {
           question: "Is PepTalk free to use?",
           answer:
-            "Yes, PepTalk is free to download and use. We offer basic messaging and translation features at no cost. Premium features like advanced translation options and additional storage may require a subscription.",
+          "Yes, PepTalk is free to download and use. Basic messaging and real-time translation features are included at no cost. Some advanced features, such as enhanced translation options or extra storage, may require a subscription."
         },
         {
           question: "What devices does PepTalk support?",
           answer:
-            "PepTalk is available for iOS (iPhone and iPad), Android smartphones and tablets, and as a web application for desktop computers. All versions sync seamlessly across your devices.",
+          "PepTalk is available for both Android and iOS devices, including phones and tablets. All versions are designed to work smoothly across your devices with sync support."
         },
       ],
     },
@@ -41,22 +41,22 @@ export default function FAQPage() {
         {
           question: "How many languages does PepTalk support?",
           answer:
-            "PepTalk supports over 100 languages for real-time translation. We continuously add new languages based on user demand and translation quality improvements.",
+          "PepTalk supports real-time translation in over 100 languages. We regularly add new languages based on user demand and translation quality improvements."
         },
         {
           question: "How accurate is the translation?",
           answer:
-            "Our translation accuracy varies by language pair but typically ranges from 85-95%. We use advanced AI models and continuously improve our translation quality. For critical communications, we recommend having important messages reviewed by native speakers.",
+          "Translation quality may vary by language, but PepTalk is built to provide clear and natural conversations across supported languages. We use advanced AI to improve translation accuracy over time"
         },
         {
           question: "Can I translate messages offline?",
           answer:
-            "Yes, PepTalk offers offline translation for the most popular language pairs. You can download language packs for offline use, though online translation generally provides better accuracy and supports more languages.",
+          "Yes, PepTalk supports offline translation for select languages. You can download language packs for offline use, but online translation offers better accuracy and broader language support."
         },
         {
           question: "How do I change my default language?",
           answer:
-            "Go to Settings > Languages > Default Language and select your preferred language. This will be the language that incoming messages are translated to by default.",
+          "To change your default language, go to Settings, then Languages, and choose your preferred option. Incoming messages will be translated to this language automatically."
         },
       ],
     },
@@ -66,22 +66,22 @@ export default function FAQPage() {
         {
           question: "Are my messages encrypted?",
           answer:
-            "Yes, all messages in PepTalk are protected with end-to-end encryption. This means only you and the recipient can read your messages - not even PepTalk can access them.",
+          "Yes, all messages on PepTalk are secured with end-to-end encryption. Only you and the recipient can read or listen to the content. PepTalk cannot access your conversations"
         },
         {
           question: "Does PepTalk store my translation history?",
           answer:
-            "No, your translation history is stored locally on your device only. We don't store your conversations or translation data on our servers to protect your privacy.",
+          "No, PepTalk does not store your translation history. All translation activity and language preferences are processed and stored locally on your device to protect your privacy."
         },
         {
           question: "How do I enable two-step verification?",
           answer:
-            "Go to Settings > Account > Two-Step Verification and follow the setup process. You'll create a PIN that will be required when registering your phone number with PepTalk again.",
+          "To enable two-step verification, go to Settings > Account > Two-Step Verification and follow the setup instructions. You will be asked to create a PIN that will be required when registering your phone number again."
         },
         {
           question: "Can I delete my account and data?",
           answer:
-            "Yes, you can delete your PepTalk account at any time by going to Settings > Account > Delete Account. This will permanently remove your account and associated data from our servers.",
+          "Yes, you can delete your PepTalk account at any time by going to Settings > Account > Delete Account. This action will permanently remove your account and all associated data from our servers."
         },
       ],
     },
@@ -91,22 +91,22 @@ export default function FAQPage() {
         {
           question: "How do group chats work with translation?",
           answer:
-            "In group chats, each member can set their preferred language. Messages are automatically translated to each member's chosen language, allowing seamless multilingual conversations.",
+          "In group chats, each participant can set their preferred language. Messages are automatically translated in real time so everyone sees the conversation in the language they choose."
         },
         {
           question: "Can I send voice messages with translation?",
           answer:
-            "Yes, PepTalk can transcribe voice messages and translate them to the recipient's preferred language. The recipient can also hear the original audio if they choose.",
+          "Yes, PepTalk can transcribe your voice message and translate it into the recipient’s preferred language. The original audio is also available if the recipient wants to listen."
         },
         {
           question: "What file types can I share?",
           answer:
-            "You can share photos, videos, documents (PDF, DOC, etc.), audio files, and location. File size limits apply: 100MB for videos, 16MB for photos, and 100MB for documents.",
+          "You can share images, videos, documents (PDF, DOC), audio files, and location. File size limits are 16MB for photos, 100MB for videos, and 100MB for documents."
         },
         {
           question: "How do I create a group chat?",
           answer:
-            "Tap the 'New Chat' button, select 'New Group', choose your contacts, set a group name and photo, and tap 'Create'. You can add up to 256 participants to a group.",
+          "To create a group, tap the New Chat button, select New Group, add your contacts, name the group, and tap Create. PepTalk supports up to 256 participants in one group."
         },
       ],
     },
@@ -116,22 +116,22 @@ export default function FAQPage() {
         {
           question: "Why aren't my messages being delivered?",
           answer:
-            "Message delivery issues can be caused by poor internet connection, the recipient's phone being offline, or app synchronization problems. Try checking your internet connection and restarting the app.",
+          "Message delivery issues can occur due to poor internet connectivity, the recipient's device being offline, or background sync interruptions. Check your connection and try restarting PepTalk to resolve the issue"
         },
         {
           question: "The app is running slowly. How can I fix this?",
           answer:
-            "Try closing other apps, restarting PepTalk, clearing the app cache, or restarting your device. If problems persist, ensure you have the latest version of the app installed.",
+          "Try closing other apps, restarting PepTalk, clearing the app cache, or restarting your device. Make sure you have the latest version of the app installed from the App Store or Google Play."
         },
         {
           question: "How do I backup my chat history?",
           answer:
-            "Go to Settings > Chats > Chat Backup to set up automatic backups to your cloud storage (iCloud for iOS, Google Drive for Android). You can also create manual backups anytime.",
+          "Go to Settings > Chats > Chat Backup to enable automatic backups to your cloud service (iCloud for iOS or Google Drive for Android). You can also create manual backups whenever needed."
         },
         {
           question: "I'm not receiving notifications. What should I do?",
           answer:
-            "Check that notifications are enabled in your device settings for PepTalk, ensure the app has permission to send notifications, and verify your notification preferences in PepTalk Settings > Notifications.",
+          "Make sure PepTalk has permission to send notifications in your device settings. Also check the app’s notification preferences under Settings > Notifications."
         },
       ],
     },
