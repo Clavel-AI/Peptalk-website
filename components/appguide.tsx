@@ -1,4 +1,6 @@
-import { Play, Download, MessageCircle, Globe, Users, Shield, Smartphone } from "lucide-react"
+"use client"
+
+import { Play, Download, MessageCircle, Globe, Users, Smartphone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,6 +13,7 @@ export default function AppGuidePage() {
       icon: Download,
       title: "Download & Install",
       description: "Get PepTalk on your device",
+      image: "/screenshots/download-step.png", // Add your screenshot here
       steps: [
         "Visit your device's app store (App Store for iOS, Google Play for Android)",
         "Search for 'PepTalk Multilingual Messenger'",
@@ -25,6 +28,7 @@ export default function AppGuidePage() {
       icon: Smartphone,
       title: "Account Setup",
       description: "Create your PepTalk account",
+      image: "images/Up.png", 
       steps: [
         "Open PepTalk and tap 'Get Started'",
         "Enter your phone number and tap 'Next'",
@@ -40,6 +44,7 @@ export default function AppGuidePage() {
       icon: Globe,
       title: "Sync Contacts",
       description: "Import your contacts and invite friends",
+      image: "images/Invite Contacts.png", // Add your screenshot here
       steps: [
         "Go to Settings > Contacts",
         "Tap 'Sync Contacts' button",
@@ -51,7 +56,7 @@ export default function AppGuidePage() {
       tips: [
         "Only phone numbers from your contacts will be synced",
         "You can manually refresh contacts list by pulling down",
-        "Green indicators show which contacts are already on PepTalk"
+        "Green indicators show which contacts are already on PepTalk",
       ],
     },
     {
@@ -59,6 +64,7 @@ export default function AppGuidePage() {
       icon: MessageCircle,
       title: "Start Messaging",
       description: "Send your first multilingual message",
+      image: "images/Direct.png", // Add your screenshot here
       steps: [
         "Tap the 'New Chat' button on the main screen",
         "Select a contact or enter a phone number",
@@ -77,6 +83,7 @@ export default function AppGuidePage() {
       icon: Users,
       title: "Group Chats",
       description: "Create multilingual group conversations",
+      image: "images/group.png", // Add your screenshot here
       steps: [
         "Tap 'New Chat' then select 'New Group'",
         "Add participants from your contacts",
@@ -86,24 +93,6 @@ export default function AppGuidePage() {
       ],
       tips: ["Each member can set their preferred language", "Group admins can manage translation settings"],
     },
-    // {
-    //   id: "security",
-    //   icon: Shield,
-    //   title: "Security Setup",
-    //   description: "Secure your account and messages",
-    //   steps: [
-    //     "Go to Settings > Account > Security",
-    //     "Enable Two-Step Verification",
-    //     "Create a secure 6-digit PIN",
-    //     "Add a recovery email address",
-    //     "Enable App Lock with fingerprint/face ID",
-    //     "Review privacy settings and adjust as needed",
-    //   ],
-    //   tips: [
-    //     "Use a PIN that's easy for you to remember but hard for others to guess",
-    //     "Regularly update your recovery information",
-    //   ],
-    // },
   ]
 
   const quickTips = [
@@ -168,7 +157,7 @@ export default function AppGuidePage() {
 
       {/* Step-by-Step Guide */}
       <section className="py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="space-y-16">
             {guideSteps.map((step, index) => (
               <div key={step.id} id={step.id} className="scroll-mt-20">
@@ -190,10 +179,10 @@ export default function AppGuidePage() {
                     </div>
                   </CardHeader>
                   <CardContent className="p-8">
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <div>
+                    <div className="grid lg:grid-cols-3 gap-8">
+                      <div className="lg:col-span-2">
                         <h4 className="text-lg font-semibold mb-4 text-gray-900">Instructions</h4>
-                        <ol className="space-y-3">
+                        <ol className="space-y-3 mb-8">
                           {step.steps.map((stepItem, stepIndex) => (
                             <li key={stepIndex} className="flex items-start space-x-3">
                               <div className="w-6 h-6 bg-[#3971C0] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -203,8 +192,7 @@ export default function AppGuidePage() {
                             </li>
                           ))}
                         </ol>
-                      </div>
-                      <div>
+
                         <h4 className="text-lg font-semibold mb-4 text-gray-900">Pro Tips</h4>
                         <div className="space-y-3">
                           {step.tips.map((tip, tipIndex) => (
@@ -214,11 +202,59 @@ export default function AppGuidePage() {
                             </div>
                           ))}
                         </div>
-                        {/* Placeholder for screenshot */}
-                        <div className="mt-6 bg-gray-100 rounded-lg p-8 text-center">
-                          <Smartphone className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                          <p className="text-gray-500 text-sm">Screenshot placeholder</p>
-                          <p className="text-gray-400 text-xs">{step.title} interface</p>
+                      </div>
+
+                      {/* Mobile Screenshot Container */}
+                      <div className="lg:col-span-1 flex justify-center">
+                        <div className="relative">
+                          {/* Phone Frame */}
+                          <div className="w-64 h-[540px] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+                            <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+                              {/* Status Bar */}
+                              {/* <div className="h-6 bg-gray-50 flex items-center justify-between px-6 text-xs text-gray-600">
+                                <span>9:41</span>
+                                <div className="flex items-center space-x-1">
+                                  <div className="w-4 h-2 border border-gray-400 rounded-sm">
+                                    <div className="w-3 h-1 bg-green-500 rounded-sm"></div>
+                                  </div>
+                                </div>
+                              </div> */}
+
+                              {/* Screenshot Area */}
+                              <div className="flex-1 relative">
+                                <img
+                                  src={step.image || "/placeholder.svg"}
+                                  alt={`${step.title} screenshot`}
+                                  className="w-full h-full object-cover object-top"
+                                  onError={(e) => {
+                                    // Fallback to placeholder if image fails to load
+                                    e.currentTarget.style.display = "none"
+                                  }}
+                                />
+                                {/* Fallback placeholder (hidden by default) */}
+                                <div
+                                  className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col items-center justify-center p-6 text-center"
+                                  style={{ display: "none" }}
+                                >
+                                  <Smartphone className="w-16 h-16 text-gray-300 mb-4" />
+                                  <p className="text-gray-500 text-sm font-medium mb-2">{step.title}</p>
+                                  <p className="text-gray-400 text-xs leading-relaxed">
+                                    Add your screenshot to:
+                                    <br />
+                                    <code className="bg-gray-200 px-2 py-1 rounded text-xs">{step.image}</code>
+                                  </p>
+                                </div>
+                              </div>
+
+                              {/* Home Indicator */}
+                              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-300 rounded-full"></div>
+                            </div>
+                          </div>
+
+                          {/* Step Number Badge */}
+                          <div className="absolute -top-3 -right-3 w-8 h-8 bg-[#3971C0] rounded-full flex items-center justify-center shadow-lg">
+                            <span className="text-white text-sm font-bold">{index + 1}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -230,11 +266,11 @@ export default function AppGuidePage() {
         </div>
       </section>
 
-      {/* Quick Tips */}
+      {/* Quick Tips Section */}
       {/* <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Quick Tips for Better Experience</h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Quick Tips</h2>
+          <div className="grid md:grid-cols-2 gap-6">
             {quickTips.map((tip, index) => (
               <Card key={index} className="border-0 shadow-md">
                 <CardContent className="p-6">
@@ -243,31 +279,6 @@ export default function AppGuidePage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Video Tutorials */}
-      {/* <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Video Tutorials</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {["Getting Started with PepTalk", "Setting Up Real-time Translation", "Creating Multilingual Groups"].map(
-              (title, index) => (
-                <Card
-                  key={index}
-                  className="border-0 shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
-                >
-                  <div className="bg-gray-200 aspect-video flex items-center justify-center">
-                    <Play className="w-12 h-12 text-[#3971C0]" />
-                  </div>
-                  <CardContent className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
-                    <p className="text-sm text-gray-600">5:30 minutes</p>
-                  </CardContent>
-                </Card>
-              ),
-            )}
           </div>
         </div>
       </section> */}

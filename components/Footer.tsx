@@ -155,7 +155,7 @@ export default function Footer() {
                     href="https://clavel.ai/about-us/"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     About Us
                   </Link>
                 </li>
@@ -164,7 +164,7 @@ export default function Footer() {
                     href="#features"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Features
                   </Link>
                 </li>
@@ -173,7 +173,7 @@ export default function Footer() {
                     href="/blog"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Blog
                   </Link>
                 </li>
@@ -182,7 +182,7 @@ export default function Footer() {
                     href="https://clavel.ai/contacts/"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Contact Us
                   </Link>
                 </li>
@@ -201,7 +201,7 @@ export default function Footer() {
                     href="/terms"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Terms & Conditions
                   </a>
                 </li>
@@ -210,7 +210,7 @@ export default function Footer() {
                     href="/privacy"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Privacy Policy
                   </a>
                 </li>
@@ -219,7 +219,7 @@ export default function Footer() {
                     href="/security"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Security Practices
                   </Link>
                 </li>
@@ -228,7 +228,7 @@ export default function Footer() {
                     href="/help"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Help Center
                   </Link>
                 </li>
@@ -246,7 +246,7 @@ export default function Footer() {
                     href="https://play.google.com/store/apps/datasafety?id=com.webstore&hl=en"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     Android
                   </a>
                 </li>
@@ -255,7 +255,7 @@ export default function Footer() {
                     href="https://www.apple.com/in/app-store/"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     IPhone
                   </a>
                 </li>
@@ -264,7 +264,7 @@ export default function Footer() {
                     href="/guide"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     App Guide
                   </a>
                 </li>
@@ -273,7 +273,7 @@ export default function Footer() {
                     href="/fqa"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
-                    <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
                     FAQs
                   </a>
                 </li>
