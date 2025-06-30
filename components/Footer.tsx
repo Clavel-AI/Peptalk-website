@@ -306,7 +306,7 @@ export default function Footer() {
                     <span className="text-yellow-400 text-xs">✉️</span>
                   </div>
                   <a href="mailto:info@clavel.ai" className="text-gray-400 hover:text-white transition-colors text-sm">
-                    info@clavel.ai
+                    info@peptalk.chat
                   </a>
                 </li>
               </ul>

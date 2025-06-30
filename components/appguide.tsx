@@ -129,10 +129,10 @@ export default function AppGuidePage() {
               <Play className="w-5 h-5 mr-2" />
               Watch Video Guide
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white hover:bg-white/10 border-white">
+            {/* <Button size="lg" variant="outline" className="bg-transparent text-white hover:bg-white/10 border-white">
               <Download className="w-5 h-5 mr-2" />
               Download PDF Guide
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -237,11 +237,11 @@ export default function AppGuidePage() {
                                   style={{ display: "none" }}
                                 >
                                   <Smartphone className="w-16 h-16 text-gray-300 mb-4" />
-                                  <p className="text-gray-500 text-sm font-medium mb-2">{step.title}</p>
+                                  {/* <p className="text-gray-500 text-sm font-medium mb-2">{step.title}</p> */}
                                   <p className="text-gray-400 text-xs leading-relaxed">
                                     Add your screenshot to:
                                     <br />
-                                    <code className="bg-gray-200 px-2 py-1 rounded text-xs">{step.image}</code>
+                                    {/* <code className="bg-gray-200 px-2 py-1 rounded text-xs">{step.image}</code> */}
                                   </p>
                                 </div>
                               </div>
@@ -252,9 +252,9 @@ export default function AppGuidePage() {
                           </div>
 
                           {/* Step Number Badge */}
-                          <div className="absolute -top-3 -right-3 w-8 h-8 bg-[#3971C0] rounded-full flex items-center justify-center shadow-lg">
+                          {/* <div className="absolute -top-3 -right-3 w-8 h-8 bg-[#3971C0] rounded-full flex items-center justify-center shadow-lg">
                             <span className="text-white text-sm font-bold">{index + 1}</span>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
