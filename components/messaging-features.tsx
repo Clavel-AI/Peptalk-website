@@ -7,8 +7,8 @@ import { Shield, MessageCircle, FileText, Video, Settings, Bell } from "lucide-r
 const features = [
   {
     icon: <Shield className="w-8 h-8 text-white" />,
-    title: "Message securely",
-    description: "Your chats are encrypted and saved safely with backup support.",
+    title: "End-to-End Encryption",
+    description: "Personal messages, calls, photos and videos are secured with end-to-end encryption.",
   },
   {
     icon: <MessageCircle className="w-8 h-8 text-white" />,

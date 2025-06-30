@@ -146,13 +146,13 @@ export default function Footer() {
             {/* Quick Links */}
             <div>
               <h4 className="text-white font-semibold text-lg mb-6 relative">
-                Quick Links
+                Explore PepTalk
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
               </h4>
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="https://clavel.ai/about-us/"
+                    href="/about"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
                     {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
@@ -179,6 +179,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                  target="_blank"
                     href="https://clavel.ai/contacts/"
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
@@ -192,7 +193,7 @@ export default function Footer() {
             {/* Legal */}
             <div>
               <h4 className="text-white font-semibold text-lg mb-6 relative">
-                Legal
+                Trust & Policies
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
               </h4>
               <ul className="space-y-3">
@@ -220,7 +221,7 @@ export default function Footer() {
                     className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-2 group"
                   >
                     {/* <span className="w-1 h-1 bg-[#3971C0] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span> */}
-                    Security Practices
+                    Security 
                   </Link>
                 </li>
                 <li>
@@ -237,7 +238,7 @@ export default function Footer() {
 
             <div>
               <h4 className="text-white font-semibold text-lg mb-6 relative">
-                Use Peptalk
+                Get Started
                 <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#3971C0] rounded"></span>
               </h4>
               <ul className="space-y-3">
@@ -306,7 +307,7 @@ export default function Footer() {
                     <span className="text-yellow-400 text-xs">✉️</span>
                   </div>
                   <a href="mailto:info@clavel.ai" className="text-gray-400 hover:text-white transition-colors text-sm">
-                    info@peptalk.chat
+                    support@peptalk.chat
                   </a>
                 </li>
               </ul>
