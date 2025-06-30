@@ -197,7 +197,7 @@ export default function AboutPage() {
       </section> */}
 
       {/* Team Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Meet Our Founder's</h2>
@@ -226,7 +226,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Awards & Recognition */}
       {/* <section className="py-16">
