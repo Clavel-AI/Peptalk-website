@@ -63,13 +63,13 @@ export default function Hero() {
         <div className="flex items-center justify-center mb-8">
         </div>
 
-        <h1 className="text-[54px] md:text-[54px] lg:text-[54px] font-bold text-[#080808] mb-6 leading-tight font-figtree transition-opacity duration-500">
+<h1 className="text-[38px] sm:text-[44px] lg:text-[54px] md:text-[54px] lg:text-[54px] font-bold text-[#080808] mb-6 leading-tight font-figtree transition-opacity duration-500">
           {translations[currentIndex].line1}
           <br />
           {translations[currentIndex].line2}
         </h1>
 
-        <p className="text-[17px] md:text-[17px] text-[#6E6E6E] max-w-3xl mx-auto leading-relaxed font-figtree">
+        <p className="text-[15px] md:text-[17px] lg:text-[17px] text-[#6E6E6E] max-w-3xl mx-auto leading-relaxed font-figtree">
           Tired of copying messages into translation apps? PepTalk translates your messages in real time so both people chat in their own language.
         </p>
       </div>

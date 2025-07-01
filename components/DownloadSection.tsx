@@ -9,8 +9,8 @@ export default function Home() {
 
         <div className="md:w-[40%] h-full flex flex-col justify-between text-center md:text-left h-[300px]">
           <div className='mb-6 md:mb-0 h-[70%]'>
-            <h2 className="sm:text-[45px] md:text-[35px] lg:text-[45px] font-bold mb-1">Download App Today</h2>
-            <p className="sm:text-[20px] md:text-[17px] lg:text-[20px] mb-6">
+            <h2 className="text-[25px] sm:text-[45px] md:text-[35px] lg:text-[45px] font-bold mb-1">Download App Today</h2>
+            <p className="text-[17px] sm:text-[20px] md:text-[17px] lg:text-[20px] mb-6">
               Join thousands of satisfied users who have downloaded our app.
               Experience a seamless and engaging platform that enhances your daily life.
             </p>

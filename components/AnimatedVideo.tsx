@@ -14,7 +14,7 @@ export default function VideoSection() {
     }
 
     return (
-        <section className="w-full h-screen overflow-hidden flex items-center justify-center relative">
+        <section className="w-full lg:h-screen overflow-hidden flex items-center justify-center relative">
             <video
                 src="/images/animated-video-new.mp4" 
                 autoPlay

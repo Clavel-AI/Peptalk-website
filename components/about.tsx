@@ -1,3 +1,5 @@
+"use client"
+
 import { Globe, Users, Shield, Zap, Heart, Award, MapPin, Mail, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -32,22 +34,22 @@ export default function AboutPage() {
     {
       icon: Globe,
       title: "Global Connection",
-      description: "We believe language should never be a barrier to human connection and understanding.",
+      description: "We make communication across languages simple and natural",
     },
     {
       icon: Shield,
       title: "Privacy First",
-      description: "Your conversations are yours alone. We build security and privacy into everything we do.",
+      description: "We design everything to keep your conversations secure and private.",
     },
     {
       icon: Users,
       title: "Inclusive Communication",
-      description: "Everyone deserves to be heard and understood, regardless of the language they speak.",
+      description: "We remove language as a barrier to being heard.",
     },
     {
       icon: Zap,
       title: "Innovation",
-      description: "We continuously push the boundaries of what's possible in real-time translation technology.",
+      description: "We build smarter tools that keep getting better.",
     },
   ]
 
@@ -90,21 +92,13 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white pt-10">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#3971C0] to-[#2c5aa0] text-white py-20">
+      <section className="bg-gradient-to-br from-[#3971C0] to-[#2c5aa0] text-white pt-20 pb-10">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, commodi!</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">PepTalk helps you connect with anyone, in any language.</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            At PepTalk, we're on a mission to break down language barriers and create a world where everyone can
-            communicate freely, regardless of the language they speak.
+            We make every message easy to understand by translating conversations as you chat. Whether it's a quick message or a group call, you can speak naturally and stay in your language while others stay in theirs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" className="bg-white text-[#3971C0] hover:bg-gray-100 border-white">
-              Our Story
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white hover:bg-white/10 border-white">
-              Meet the Team
-            </Button>
-          </div>
+         
         </div>
       </section>
 
@@ -126,18 +120,15 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Our Story</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why We Built PepTalk</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ad quasi necessitatibus dolore facilis culpa nostrum nesciunt voluptate. Natus, suscipit? Necessitatibus officia deserunt cum? Qui sapiente natus quod ea amet.
-                </p>
+PepTalk is a product of Clavel AI, created with one goal in mind: to make real conversations possible across any language. We designed PepTalk to be more than just a chat app. It is a secure, private, and intelligent space where people from different languages and cultures connect naturally.                </p>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero cupiditate maxime minima et dicta obcaecati voluptatum nobis error dignissimos! Quos?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, molestiae.
-                </p>
+We imagine a world where language never stands in the way of a real connection. PepTalk is built to make conversations effortless, inclusive, and human across any language. We believe communication should be natural, whether you are chatting with a friend or working with a global team. Everyone deserves to be understood, clearly and instantly.                </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, expedita. Lorem ipsum dolor sit.
-                </p>
+Our mission is to remove language barriers from everyday conversations. PepTalk provides real time translation in every message, powered by secure and private technology. We make it easy for people to connect, share, and collaborate without needing to speak the same language. Every feature we build helps people communicate with confidence and clarity.                </p>
               </div>
               <div className="bg-gray-100 rounded-2xl p-8 text-center">
                 <Heart className="w-16 h-16 text-[#3971C0] mx-auto mb-4" />
@@ -307,7 +298,12 @@ export default function AboutPage() {
             people from around the globe.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" className="bg-white text-[#3971C0] hover:bg-gray-100 border-white">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white text-[#3971C0] hover:bg-gray-100 border-white"
+              onClick={() => window.open('https://play.google.com/store/apps/', '_blank')}
+            >
               Download PepTalk
             </Button>
           </div>
